@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'PT Serif Caption', serif;
+}
+
+body {
+  background: #0a2a43;
+  min-height: 1500px;
+}
+
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parallax::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0a2a43), to(transparent));
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 3;
+}
+
+.parallax::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a2a43;
+  z-index: 3;
+  mix-blend-mode: color;
+}
+
+.parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+
+.road {
+  z-index: 2;
+}
+
+.parallax-title {
+  position: relative;
+  font-size: 10em;
+  color: #fff;
+  z-index: 1;
+}
+
+@media (max-width: 1090px) {
+  .parallax-title {
+    font-size: 6em;
+  }
+}
+
+@media (max-width: 740px) {
+  .parallax-title {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 450px) {
+  .parallax-title {
+    font-size: 3em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
